@@ -2,6 +2,17 @@ import face_recognition
 import cv2
 import os
 import numpy as np
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+import time
+ 
+# initialize the camera and grab a reference to the raw camera capture
+camera = PiCamera()
+rawCapture = PiRGBArray(camera)
+ 
+ 
+# grab an image from the camera
+
 
 # This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
 # other example, but it includes some basic performance tweaks to make things run a lot faster:
@@ -13,7 +24,7 @@ import numpy as np
 # specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
 
 # Get a reference to webcam #0 (the default one)
-video_capture = cv2.VideoCapture(0)
+
 
 # Load a sample picture and learn how to recognize it.
 
@@ -40,7 +51,9 @@ process_this_frame = True
 
 while True:
     # Grab a single frame of video
-    ret, frame = video_capture.read()
+    #ret, frame = video_capture.read()
+    camera.capture(rawCapture, format="bgr")
+    frame = rawCapture.array
 
     # Resize frame of video to 1/4 size for faster face recognition processing
     print('!!')
