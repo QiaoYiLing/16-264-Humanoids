@@ -8,7 +8,7 @@ import time
  
 # initialize the camera and grab a reference to the raw camera capture
 camera = PiCamera()
-rawCapture = PiRGBArray(camera)
+
  
  
 # grab an image from the camera
@@ -53,6 +53,7 @@ N_INTER = 4
 while True:
     # Grab a single frame of video
     #ret, frame = video_capture.read()
+    rawCapture = PiRGBArray(camera)
     camera.capture(rawCapture, format="bgr")
     frame = rawCapture.array
 
