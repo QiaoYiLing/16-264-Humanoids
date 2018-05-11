@@ -1,28 +1,71 @@
-# 16-264-Humanoids Facial Recognition Project
+# 16-264-Humanoids: SmartWheels
 
 ## Team Members
 Tanushree Mediratta, Yiling (Jovi) Qiao, Lena Li, Krithika Veerappan
 
-## Project Description
+## Goals
+Our initial goal was to create a self-driving delivery robot. We wanted to achieve this by integrating object detection, and wifi localization to enable the robot to move independently. However, we soon realised that this idea was very ambitious. So, we modified our idea and decided to build a robot that we could control through command line instructions but also had the ability to detect obstacles in its vicinity using distance sensors.
 
-For the first part of our project, we wanted to do something with facial/emotion recognition. We brainstormed many humanoid ideas, and most of them needed some kind of a command to be activated. Many current humanoids use voice activation as face recognition can be slightly more challenging. From cybersecurity to household chores, visual recognition can be a very useful tool for humanoids to execute their tasks.
+## Motivation
+We were really trying to build off of what the users wanted. During the beginning of our project when we were still deciding what we wanted to do, we went around campus asking people what they would like in a robot. The vast majority of people mentioned chores like doing laundry or giving something to someone on the other side of campus, etc. Essentially, routine tasks that this robot can potentially help with. Building based off of what other people wanted and addressing market pull was important to us. 
 
-However, improper facial recognition could create many more dangers. If the humanoid identified an incorrect person as a criminal, it could lead people on the wrong path. While working on this assignment, we encountered some difficulties with proper facial recognition.
+## Technical problems encountered and fixed
+One of the first issues we encountered was the fact that none of us had worked with hardware components before. Thus, we had to familiarize ourselves with Arduino and Raspberry Pi as we went along. 
+The second major problem we ran into was when two of the motors stopped responding to any kind of input we would provide the encoders. We spent hours trying to fix this issue by changing the pin allocations and power supply connections of each of the encoders, but nothing seemed to work. Thus, we decided to move on and make the best use of the two remaining wheels to figure out a way to make the robot move in all four directions. We were able to accomplish this by providing the encoders appropriate bit vectors based on which direction we wanted the robot to move in. 
+Lastly, we had a lot of issues trying to integrate all the different components together. Following are the three different parts of this project that we got to work individually- 
+* The robot could be controlled using command line instructions
+* The distance sensors worked correctly- we were able to read the voltage we received from the sensors and convert it into distance in centimeters.
+* Facial recognition worked- the robot was able to correctly identify the person it was asked to find and then move towards it. (self-driving in a sense)
 
-With our project, when someone looks at a webcam, a box will frame their face and the computer will state which face it recognizes. Then it will read that name aloud. If an unknown person looks at the camera, it will show unknown.
+Though, we were able to integrate facial recognition with the part of the code that managed the motors of our robot vehicle, we were not able to integrate the code that manipulated the distance sensor data. We figured that this was potentially happening due to interfering analog pin signals. Unfortunately, we ran out of time before we could fix this problem.
 
-We started by finding a GitHub repository face_recognition; we made some changes to that code. We edited the code to allow us to add pictures to the specified folder and names were automatically updated in the “database” we had created for this project. The automated updating made it easier for us to use the code as it did not require us to constantly be changing our code. On a macro scale, having this form of adding pictures would make it a smooth process for having a robot that can recognize people from larger databases (such as photos of all members of Carnegie Mellon).
+## Next Steps
+If we had more time, we would have liked to work on the following:
+* A  wireless way of communicating with the robot by finding a way to interface the Raspberry Pi with the Arduino. This would eliminate our current issue of having to walk along with the robot as it moved since the Arduino was directly plugged into our laptop. 
+* We would have tried to replace the two motors that stopped responding so that the robot could achieve its goal of being a four-wheeled robot. 
+* Make the distance sensors work along with the rest of the code that moves the robot. This would have served as a good first step towards implementing a rudimentary method of detecting obstacles.
+* Make the robot taller for practical purposes
+* Lastly, we would have liked to sync our code with a database that contained a specific set of directions that would trace the path for the robot, given a destination.
+With all of these modifications, we could potentially create a semi-autonomous robot that could move independently in a known environment that remains mostly static and doesn’t receive much moving traffic. Examples of real world applications include- food runner at a restaurant, library assistant, hotel room service, etc.
 
-We imported pygame, google’s text to speech api, face_recognition (discussed above), and OpenCV. The main purpose of OpenCV is to detect faces in the image the camera sees. All other packages and the API are used for processing further information based on the faces OpenCV detects.
+## Lessons learnt
+We learnt a lot by working on this project. We not only gained technical knowledge, but also gained certain soft skills like learning when to move on and to stay motivated despite many things not working out the way you planned. The biggest takeaway for us was how to deliver a product with the same basic functionality despite the various technical issues we face. We were proud of the fact that even though some of the most vital components broke down and stopped working, we were able to build a working robot.
 
-The face recognition is from a live feed from the user’s webcam. To make things run faster, as efficiency is an important component for humanoids to meet the high standards set for them by science fiction, we made it process each video frame at ¼ resolution but display at full resolution.
+Materials used:
+Hardware         : The car, distance sensor, Raspberry PI    
+Communication: Wi-Fi (better not CMU Wi-Fi) or hot-spot (from an Android phone)
+PC                    : Arduino IDE, Python3
+Raspberry PI    : OpenCV, python package (facial-recognition, dlib)
 
-We started by getting a reference to the default webcam. The next important step was to load a sample picture and learn how to recognize it.
+Tips:
+Remember to charge the battery.
+Connect all the wires, including the connections of Raspberry PI to laptop and Arduino to laptop.
+to run the remote control or recognition-based self-driving, run 
+$  python run.py 
+and follow the instruction on the command line.
+to run the distance sensor, upload the Arduino through IDE and you can see the distance in centimeter.
 
-We initialized some variables for the code to start running when it sees a face in the frame. Our next step was to create a pygame object instance. We also made a scoring system to improve accuracy. It took a single frame, and it resized it for faster face recognition. OpenCV uses BGR color, so we had to change it to RGB color for face_recognition to correctly interpret the frame. Every other frame is processed to save time, and all faces and face encodings are found in the particular frame. It can recognize multiple faces at the same time.
+Instructions on how to use the code:
+if you have any question, please contact yilingq97@gmail.com or yilingq@qq.com
 
-The code then checks for a face match in the set of known faces, and increments score for each match. To display the results of the face recognition, we had to readjust the size of the frame. The next thing to code was to draw a label below the face with the name. Finally, the Google text to speech API says hi to the person it recognizes or says “I’m sorry, I don’t know you.” to ones id doesn’t.
+First you might want to pip install some packages related to Wi-Fi and serial. Just follow the warning and error information.
 
-One bug is that it only detects faces in every other frame of the video. However, our first model detected faces in every frame but was less accurate. We decided to go with this version because accuracy is more important, and the bug could be fixed later.
+Modify ./wpa_supplicant.config according to your own Wi-Fi account and put the ./wpa_supplicant.config and ./ssh into your PI's SD card.
 
-https://youtu.be/xsEYHln5Av0
+Make sure your laptop and Pi are on the same Wi-Fi network, and find your PI's IP address py by typing in your laptop:
+$ ping raspberry.local
+
+Put ./facRec/test1.py into Raspberry Pi /home/pi/jovi/16-264-Humanoids/faceRec/test1.py (It's already there!) by running in your laptop:
+$ scp ./facRec/test1.py  pi@ip:/home/pi/jovi/16-264-Humanoids/faceRec/
+password: humanoids
+Also, put your own photo with name in your Pi: /home/pi/jovi/16-264-Humanoids/pics/
+
+Modify ./run.py, change the IP address into your current IP (it will change once you are in a new Wi-Fi). Run in your laptop:
+$ python run.py
+and your laptop will connect to your Pi, and run test1.py remotely.
+
+Follow the instructions, type 'face' to go into the self-driving modem or 'command' to go to remote control mode.
+
+Youtube link: https://youtu.be/WkZyevzvqoY
+Github link  : https://github.com/QiaoYiLing/16-264-Humanoids
+
