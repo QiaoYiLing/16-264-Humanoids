@@ -42,7 +42,7 @@ We learnt a lot by working on this project. We not only gained technical knowled
 Remember to charge the battery.
 Connect all the wires, including the connections of Raspberry PI to laptop and Arduino to laptop.
 to run the remote control or recognition-based self-driving, run 
-'$  python run.py'
+`$  python run.py`
 and follow the instruction on the command line.
 to run the distance sensor, upload the Arduino through IDE and you can see the distance in centimeter.
 
