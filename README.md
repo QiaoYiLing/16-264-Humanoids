@@ -70,6 +70,7 @@ and your laptop will connect to your Pi, and run __test1.py__ remotely.
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=WkZyevzvqoY
 " target="_blank"><img src="http://img.youtube.com/vi/WkZyevzvqoY/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 Link: https://www.youtube.com/watch?feature=player_embedded&v=WkZyevzvqoY
 
 ## Github 
