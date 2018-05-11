@@ -26,6 +26,7 @@ If we had more time, we would have liked to work on the following:
 * Make the distance sensors work along with the rest of the code that moves the robot. This would have served as a good first step towards implementing a rudimentary method of detecting obstacles.
 * Make the robot taller for practical purposes
 * Lastly, we would have liked to sync our code with a database that contained a specific set of directions that would trace the path for the robot, given a destination.
+
 With all of these modifications, we could potentially create a semi-autonomous robot that could move independently in a known environment that remains mostly static and doesn’t receive much moving traffic. Examples of real world applications include- food runner at a restaurant, library assistant, hotel room service, etc.
 
 ## Lessons learnt
