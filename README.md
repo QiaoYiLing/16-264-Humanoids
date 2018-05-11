@@ -66,7 +66,7 @@ We learnt a lot by working on this project. We not only gained technical knowled
 * Also, put your own photo with name in your Pi: __/home/pi/jovi/16-264-Humanoids/pics/__
 
 * Modify __./run.py__, change the IP address into your current IP (it will change once you are in a new Wi-Fi). Run in your laptop:
-$ python run.py
+`$ python run.py`
 and your laptop will connect to your Pi, and run __test1.py__ remotely.
 
 * Follow the instructions, type `face` to go into the self-driving modem or `command` to go to remote control mode.
