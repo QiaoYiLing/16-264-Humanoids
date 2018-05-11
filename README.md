@@ -1,4 +1,4 @@
-# 16-264-Humanoids: SmartWheels
+# CMU 16-264-Humanoids: SmartWheels
 
 ## Team Members
 Tanushree Mediratta, Yiling (Jovi) Qiao, Lena Li, Krithika Veerappan
