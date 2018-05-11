@@ -39,34 +39,34 @@ We learnt a lot by working on this project. We not only gained technical knowled
 * Raspberry PI    : OpenCV, python package (facial-recognition, dlib)
 
 ## Tips
-Remember to charge the battery.
-Connect all the wires, including the connections of Raspberry PI to laptop and Arduino to laptop.
-to run the remote control or recognition-based self-driving, run 
-`$  python run.py`
+- Remember to charge the battery.
+- Connect all the wires, including the connections of Raspberry PI to laptop and Arduino to laptop.
+to run the remote control or recognition-based self-driving, run `$  python run.py`
 and follow the instruction on the command line.
 to run the distance sensor, upload the Arduino through IDE and you can see the distance in centimeter.
 
-Instructions on how to use the code:
-if you have any question, please contact yilingq97@gmail.com or yilingq@qq.com
+##Instructions on how to use the code
+* if you have any question, please contact yilingq97@gmail.com or yilingq@qq.com
 
-First you might want to pip install some packages related to Wi-Fi and serial. Just follow the warning and error information.
+* First you might want to pip install some packages related to Wi-Fi and serial. Just follow the warning and error information.
 
-Modify ./wpa_supplicant.config according to your own Wi-Fi account and put the ./wpa_supplicant.config and ./ssh into your PI's SD card.
+* Modify __./wpa_supplicant.config__ according to your own Wi-Fi account and put the __./wpa_supplicant.config__ and __./ssh__ into your PI's SD card.
 
-Make sure your laptop and Pi are on the same Wi-Fi network, and find your PI's IP address py by typing in your laptop:
-$ ping raspberry.local
+* Make sure your laptop and Pi are on the same Wi-Fi network, and find your PI's IP address py by typing in your laptop:
+`$ ping raspberry.local`
 
-Put ./facRec/test1.py into Raspberry Pi /home/pi/jovi/16-264-Humanoids/faceRec/test1.py (It's already there!) by running in your laptop:
-$ scp ./facRec/test1.py  pi@ip:/home/pi/jovi/16-264-Humanoids/faceRec/
-password: humanoids
-Also, put your own photo with name in your Pi: /home/pi/jovi/16-264-Humanoids/pics/
+* Put __./facRec/test1.py__ into Raspberry Pi __/home/pi/jovi/16-264-Humanoids/faceRec/test1.py__ (It's already there!) by running in your laptop:
+`$ scp ./facRec/test1.py  pi@ip:/home/pi/jovi/16-264-Humanoids/faceRec/`
+`password: humanoids`
+* Also, put your own photo with name in your Pi: __/home/pi/jovi/16-264-Humanoids/pics/__
 
-Modify ./run.py, change the IP address into your current IP (it will change once you are in a new Wi-Fi). Run in your laptop:
+* Modify __./run.py__, change the IP address into your current IP (it will change once you are in a new Wi-Fi). Run in your laptop:
 $ python run.py
-and your laptop will connect to your Pi, and run test1.py remotely.
+and your laptop will connect to your Pi, and run __test1.py__ remotely.
 
-Follow the instructions, type 'face' to go into the self-driving modem or 'command' to go to remote control mode.
+* Follow the instructions, type `face` to go into the self-driving modem or `command` to go to remote control mode.
 
 Youtube link: https://youtu.be/WkZyevzvqoY
 Github link  : https://github.com/QiaoYiLing/16-264-Humanoids
+
 
