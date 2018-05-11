@@ -1,7 +1,12 @@
 # CMU 16-264-Humanoids: SmartWheels
 
+## Instructors
+Professor [Christopher Atkeson](https://www.ri.cmu.edu/ri-people/michael-d-taylor/)
+
+Professor [Mike Taylor](http://www.cs.cmu.edu/~cga/)
+
 ## Team Members
-Tanushree Mediratta, Yiling (Jovi) Qiao, Lena Li, Krithika Veerappan
+Tanushree Mediratta, Yiling Qiao, Lena Li, Krithika Veerappan
 
 ## Goals
 Our initial goal was to create a self-driving delivery robot. We wanted to achieve this by integrating object detection, and wifi localization to enable the robot to move independently. However, we soon realised that this idea was very ambitious. So, we modified our idea and decided to build a robot that we could control through command line instructions but also had the ability to detect obstacles in its vicinity using distance sensors.
