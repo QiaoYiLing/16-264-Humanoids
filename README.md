@@ -51,7 +51,7 @@ We learnt a lot by working on this project. We not only gained technical knowled
 - To run the remote control, upload __./RC_Mecanum_PWM/RC_Mecanum_PWM2.ino__ to your Arduino
 
 ##Instructions on How to Use the Code
-* if you have any question, please contact yilingq97@gmail.com or yilingq@qq.com
+* if you have any question, please contact yilingq97@gmail.com
 
 * First you might want to pip install some packages related to Wi-Fi and serial. Just follow the warning and error information.
 
