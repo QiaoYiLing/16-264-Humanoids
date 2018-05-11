@@ -41,7 +41,7 @@ We learnt a lot by working on this project. We not only gained technical knowled
 ## Tips
 - Remember to charge the battery.
 - Connect all the wires, including the connections of Raspberry PI to laptop and Arduino to laptop.
-- Choose Auino nano in the IDE.
+- Choose __Auino nano__ in the IDE.
 - To run the distance sensor, upload the __./distance/sketch_apr26a.ino__ through Arduino IDE and you can see the distance in centimeter.
 - To run the remote control, upload __./RC_Mecanum_PWM/RC_Mecanum_PWM2.ino__ to your Arduino
 
