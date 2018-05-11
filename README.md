@@ -1,9 +1,9 @@
 # CMU 16-264-Humanoids: SmartWheels
 
 ## Instructors
-Professor [Christopher Atkeson](https://www.ri.cmu.edu/ri-people/michael-d-taylor/)
+Professor [Christopher Atkeson](http://www.cs.cmu.edu/~cga/)
 
-Professor [Mike Taylor](http://www.cs.cmu.edu/~cga/)
+Professor [Mike Taylor](https://www.ri.cmu.edu/ri-people/michael-d-taylor/)
 
 ## Team Members
 Tanushree Mediratta, Yiling Qiao, Lena Li, Krithika Veerappan
