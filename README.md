@@ -32,17 +32,17 @@ With all of these modifications, we could potentially create a semi-autonomous r
 ## Lessons learnt
 We learnt a lot by working on this project. We not only gained technical knowledge, but also gained certain soft skills like learning when to move on and to stay motivated despite many things not working out the way you planned. The biggest takeaway for us was how to deliver a product with the same basic functionality despite the various technical issues we face. We were proud of the fact that even though some of the most vital components broke down and stopped working, we were able to build a working robot.
 
-Materials used:
-Hardware         : The car, distance sensor, Raspberry PI    
-Communication: Wi-Fi (better not CMU Wi-Fi) or hot-spot (from an Android phone)
-PC                    : Arduino IDE, Python3
-Raspberry PI    : OpenCV, python package (facial-recognition, dlib)
+## Materials used
+* Hardware         : The car, distance sensor, Raspberry PI    
+* Communication: Wi-Fi (better not CMU Wi-Fi) or hot-spot (from an Android phone)
+* PC                    : Arduino IDE, Python3
+* Raspberry PI    : OpenCV, python package (facial-recognition, dlib)
 
-Tips:
+## Tips
 Remember to charge the battery.
 Connect all the wires, including the connections of Raspberry PI to laptop and Arduino to laptop.
 to run the remote control or recognition-based self-driving, run 
-$  python run.py 
+'$  python run.py'
 and follow the instruction on the command line.
 to run the distance sensor, upload the Arduino through IDE and you can see the distance in centimeter.
 
