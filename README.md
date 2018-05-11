@@ -9,7 +9,7 @@ Our initial goal was to create a self-driving delivery robot. We wanted to achie
 ## Motivation
 We were really trying to build off of what the users wanted. During the beginning of our project when we were still deciding what we wanted to do, we went around campus asking people what they would like in a robot. The vast majority of people mentioned chores like doing laundry or giving something to someone on the other side of campus, etc. Essentially, routine tasks that this robot can potentially help with. Building based off of what other people wanted and addressing market pull was important to us. 
 
-## Technical problems encountered and fixed
+## Technical Problems Encountered and Fixed
 One of the first issues we encountered was the fact that none of us had worked with hardware components before. Thus, we had to familiarize ourselves with Arduino and Raspberry Pi as we went along. 
 The second major problem we ran into was when two of the motors stopped responding to any kind of input we would provide the encoders. We spent hours trying to fix this issue by changing the pin allocations and power supply connections of each of the encoders, but nothing seemed to work. Thus, we decided to move on and make the best use of the two remaining wheels to figure out a way to make the robot move in all four directions. We were able to accomplish this by providing the encoders appropriate bit vectors based on which direction we wanted the robot to move in. 
 Lastly, we had a lot of issues trying to integrate all the different components together. Following are the three different parts of this project that we got to work individually- 
@@ -29,10 +29,10 @@ If we had more time, we would have liked to work on the following:
 
 With all of these modifications, we could potentially create a semi-autonomous robot that could move independently in a known environment that remains mostly static and doesn’t receive much moving traffic. Examples of real world applications include- food runner at a restaurant, library assistant, hotel room service, etc.
 
-## Lessons learnt
+## Lessons Learnt
 We learnt a lot by working on this project. We not only gained technical knowledge, but also gained certain soft skills like learning when to move on and to stay motivated despite many things not working out the way you planned. The biggest takeaway for us was how to deliver a product with the same basic functionality despite the various technical issues we face. We were proud of the fact that even though some of the most vital components broke down and stopped working, we were able to build a working robot.
 
-## Materials used
+## Materials Used
 * Hardware         : The car, distance sensor, Raspberry PI    
 * Communication: Wi-Fi (better not CMU Wi-Fi) or hot-spot (from an Android phone)
 * PC                    : Arduino IDE, Python3
@@ -45,7 +45,7 @@ We learnt a lot by working on this project. We not only gained technical knowled
 - To run the distance sensor, upload the __./distance/sketch_apr26a.ino__ through Arduino IDE and you can see the distance in centimeter.
 - To run the remote control, upload __./RC_Mecanum_PWM/RC_Mecanum_PWM2.ino__ to your Arduino
 
-##Instructions on how to use the code
+##Instructions on How to Use the Code
 * if you have any question, please contact yilingq97@gmail.com or yilingq@qq.com
 
 * First you might want to pip install some packages related to Wi-Fi and serial. Just follow the warning and error information.
